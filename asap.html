@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <base href="http://go.pardot.com">
+  <meta charset="utf-8" />
+  <meta name="description" content="%%description%%" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>%%title%%</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+  integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.typekit.net/tvn4rue.css">
+  <style>
+  html,
+  body {
+    font-family: "urw-din";
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+  }
+
+  header {
+    position: relative;
+    background-color: #009ddd;
+    height: 100vh;
+    min-height: 25rem;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  header video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 0;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+  }
+
+  header .container {
+    position: relative;
+    z-index: 2;
+  }
+
+  header .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+  }
+
+  /*@media (pointer: coarse) and (hover: none) {*/
+  /*    header {*/
+  /*        background-color: #4799D5;*/
+  /*    }*/
+
+  /*    header video {*/
+  /*        display: none;*/
+  /*    }*/
+  /*}*/
+
+  h3 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #173B58;
+  }
+
+  h4 {
+    font-weight: bold;
+    color: #173B58;
+    padding-bottom: 1rem;
+    line-height: 2rem;
+  }
+
+  h5 {
+    font-weight: bold;
+    color: #173B58;
+    font-size: 1.5rem;
+    padding-bottom: 1rem;
+    line-height: 2rem;
+  }
+
+  p {
+    color: #231F20;
+  }
+
+  .title-fade {
+    position: relative;
+    top: 50px;
+    opacity: 0;
+  }
+
+  footer {
+    background-color: #173B58;
+    text-align: center;
+  }
+
+  footer img {
+    width: 15rem;
+    padding: 0 2rem;
+  }
+
+  .clouds {
+    background-image: url("https://solutions2.comdata.com/l/95542/2020-07-16/49lt2c/95542/276512/clouds_back.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-top: -10rem;
+    text-align: center;
+    padding-top: 8rem;
+  }
+
+  .clouds-text {
+    padding: 2.5rem 12.5rem;
+    background-color: #009ddd;
+  }
+
+  .clouds-front {
+    margin-top: -7.5rem;
+  }
+
+  .color-bg-padding {
+    padding: 5rem;
+  }
+
+  .blue-bg-1 {
+    background-color: #173B58;
+  }
+
+  .blue-bg-2 {
+    background-color: #009ddd;
+  }
+
+  .text-white {
+    color: #ffffff;
+  }
+
+  .container {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+  }
+
+  .computer {
+    margin-bottom: -5rem;
+    width: 30rem;
+  }
+
+  .planes {
+    position: relative;
+    top: 350px;
+  }
+
+  .planes img {
+    width: 20rem;
+  }
+
+  .row {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  .img-fluid{
+    width: 100%;
+  }
+  .submit-button{
+    padding-right: 0.5rem;
+    width: 100%;
+  }
+  .form-field{
+    padding-right: 0.5rem;
+  }
+  .form-field input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 0px;
+  }
+
+  .form-field input::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: #173B58;
+  }
+  .form-field input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #173B58;
+    opacity: 1;
+  }
+  .form-field input::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #173B58;
+    opacity: 1;
+  }
+  .form-field input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #173B58;
+  }
+  .form-field input::-ms-input-placeholder { /* Microsoft Edge */
+    color: #173B58;
+  }
+
+  .form-field input::placeholder { /* Most modern browsers support this now. */
+    color: #173B58;
+  }
+
+  .btn{
+    text-transform: uppercase;
+    border-radius: 0px;
+    border: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 1rem;
+  }
+  .btn-primary:hover {
+    background-color: #ECB54F !important;
+  }
+
+  .btn-primary:focus {
+    box-shadow:0 0 0 .2rem rgba(212, 163, 74, 0.5) !important;
+    background-color: #ECB54F !important;
+  }
+
+  .btn-primary:active {
+    box-shadow:0 0 0 .2rem rgba(212, 163, 74, 0.5)!important;
+    background-color: #ECB54F !important;
+  }
+  .btn-primary{
+    background-color: #ECB54F;
+  }
+  p.pd-text label, p.pd-select label, p.pd-textarea label {
+    display:none !important;
+  }
+
+  .submit-arrow{
+    position: relative;
+    bottom: 28px;
+    right: 39%;
+    float: right;
+  }
+
+  .stock{
+    min-height: 10rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .stock-1{
+    background-image: url('https://solutions2.comdata.com/l/95542/2020-07-16/49lt4m/95542/276548/stock1.jpg');
+  }
+
+  .stock-2{
+    background-image: url('https://solutions2.comdata.com/l/95542/2020-07-16/49lt4p/95542/276550/stock2.jpg');
+  }
+
+  .plane-twirl{
+    position: relative;
+    height: 12rem;
+    top: 50%;
+  }
+
+  #plane-right{
+    margin-top: 3rem;
+  }
+
+  #plane-left{
+    margin-top: 20rem;
+  }
+
+  .footer-content{
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    /* margin-top: auto;
+    margin-bottom: auto; */
+  }
+  .footer-content p{
+    padding: 0 0.5rem;
+  }
+  #bottom-logo{
+    text-align: left;
+    padding-left: 4rem;
+  }
+
+  #bottom-copy{
+    text-align: left;
+    padding-right: 2rem;
+    padding-left: 2rem;
+  }
+
+  #down-arrow{
+    cursor: pointer;
+    width: 3rem;
+    padding-top: 5rem;
+    -moz-animation: bounce 2s infinite;
+    -webkit-animation: bounce 2s infinite;
+    animation: bounce 2s infinite;
+  }
+
+  .learn-more{
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-20px);
+    }
+    60% {
+      transform: translateY(-5px);
+    }
+  }
+
+  .icons{
+    padding: 0 1.25rem;
+  }
+
+  .alert-success{
+    text-align: center;
+    width: 100%;
+    background-color: #48c666;
+    color: #ffffff;
+    border:none;
+    border-radius: 0;
+  }
+
+  .errors{
+    color:#ffffff;
+    font-weight: bold;
+  }
+  .no-label{
+    margin-top: -0.75rem;
+    color:#ffffff;
+  }
+
+  .download{
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
+
+  @media only screen and (max-width: 767px) {
+
+    .submit-arrow{
+      right: 22%;
+    }
+
+    .submit-button{
+      padding-right: 0;
+    }
+    .form-field{
+      padding-right: 0;
+    }
+
+    header video {
+      height: 100%;
+    }
+
+    #bottom-logo{
+      text-align: center;
+      padding-left: 0;
+    }
+
+    #bottom-copy{
+      text-align: center;
+      padding-right: 0.5rem;
+      padding-left: 0.5rem;
+      margin-top: 0;
+    }
+
+    .plane-twirl{
+      position: relative;
+      height: 8rem;
+      top: 50%;
+    }
+
+    #plane-right{
+      margin-top: 2rem;
+    }
+
+    #plane-left{
+      margin-top: 29rem;
+    }
+
+    .stock{
+      min-height: 25rem;
+      max-height: 25rem;
+    }
+    .clouds-text {
+      padding: 1.5rem 1.5rem;
+    }
+
+    .computer {
+      width: 20rem;
+      margin-bottom: 4rem;
+    }
+
+    .planes img {
+      width: 13rem;
+      margin-bottom: 0rem;
+    }
+
+    .color-bg-padding {
+      padding: 1.5rem;
+    }
+
+  }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="overlay"></div>
+    <video id="hero_video"
+    src="https://solutions2.comdata.com/l/95542/2020-07-20/49srlp/95542/277122/COM_ABM_WebsiteLanding_V4.mp4"
+    playsinline muted autoplay></video>
+    <div class="container h-100">
+      <div class="d-flex h-100 text-center align-items-center" style="margin-top:-50px;">
+        <div class="w-100 text-white title-fade">
+          <img style="width:15rem; padding-bottom: 2.5rem;"
+          src="https://solutions2.comdata.com/l/95542/2020-07-09/496lx6/95542/275099/asap_logo.png" />
+          <h3 class="mb-0" pardot-region="hero-subtext">Watch better business payments unfold for you.</h3>
+          <img id="down-arrow" src="https://solutions2.comdata.com/l/95542/2020-07-16/49lt2p/95542/276522/down_arrow.png" />
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section>
+    <div>
+      <div class="row">
+
+        <div class="col-md-6 mx-auto blue-bg-1 color-bg-padding order-sm-12">
+          <h4 pardot-region="title_1" class="text-white" id="title_1">ASAP: Cloud-based payments from anywhere, to anyone,
+            for anything, at
+            any time: with total control and complete simplicity.</h4>
+            <p pardot-region="body_1" class="text-white">For more than 50 years, Comdata has led the way in how
+              businesses pay. As
+              North America’s largest Mastercard® issuer, we help U.S. and Canadian clients build world-class
+              payment programs by leveraging our unique capabilities as a credit card issuer, technology
+              developer, transaction processor, and payment-network owner.</p>
+
+              <button class="btn btn-primary btn-lg learn-more"><span pardot-region="learn_more1">Learn More</span> <span style="width:20px;"><img style="margin-top:-5px;" src="https://solutions2.comdata.com/l/95542/2020-07-16/49lt99/95542/276562/btn_arrow.png"/></span></button>
+
+            </div>
+
+            <div class="col-md-6 p-0 stock stock-1 order-sm-1">
+              <img id="plane-right" src="https://solutions2.comdata.com/l/95542/2020-07-16/49lt2y/95542/276530/plane_right.png" class="plane-twirl rellax" data-rellax-speed="1" />
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="clouds">
+          <div class="text-center planes rellax" data-rellax-speed="2">
+            <img src="https://solutions2.comdata.com/l/95542/2020-07-16/49lt35/95542/276534/planes.png" />
+          </div>
+          <div class="text-center"  style="z-index:10;">
+            <img class="computer"
+            src="https://solutions2.comdata.com/l/95542/2020-07-16/49lt2m/95542/276518/computer.png" />
+          </div>
+          <div class="clouds-front">
+            <img style="width:100%;"
+            src="https://solutions2.comdata.com/l/95542/2020-07-20/49srn1/95542/277124/clouds_front2.png" />
+          </div>
+          <div class="row clouds-text" style="z-index:100;position:relative;">
+            <div class="col-md-12 mx-auto">
+              <h4 pardot-region="title_2" class="text-white">Launch new efficiencies and savings with secure, streamlined
+                cloud-based AP.</h4>
+                <p pardot-region="body_2" class="text-white">Check payment costs. Processing time and complexity. Conflicts with vendor
+                  data and processing. If you’ve been looking for a way to streamline your AP costs and reduce
+                  complexity – while you turn saving money into a new way to generate revenue – Comdata’s ASAP
+                  Automated AP can help your vision take flight. Better still, ASAP seamlessly integrates with
+                  every ERP system. You don’t have to change anything except the amount of time you spend thinking
+                  about your AP.</p>
+                </div>
+
+                <div class="mx-auto">
+                  <button class="btn btn-primary btn-lg learn-more"><span pardot-region="learn_more2">Learn More</span> <span style="width:20px;"><img style="margin-top:-5px;" src="https://solutions2.comdata.com/l/95542/2020-07-16/49lt99/95542/276562/btn_arrow.png"/></span></button>
+                </div>
+
+              </div>
+
+
+            </div>
+          </section>
+
+          <section>
+            <div class="container bullets">
+              <div class="row">
+                <div class="col-md-12 mx-auto text-center">
+                  <h4 pardot-region="title_3">The advantages just keep unfolding.</h4>
+                </div>
+              </div>
+
+              <div class="row">
+
+                <div class="col-md-6 mx-auto">
+                  <div class="row">
+                    <div class="col-lg-2 col-md-3 col-sm-2 col-3 mx-auto icons">
+                      <img class="img-fluid" pardot-region="bullet-image1" region-type="image"
+                      src="	https://solutions2.comdata.com/l/95542/2020-07-21/49vz37/95542/277430/icon_lock_01.png" />
+                    </div>
+                    <div class="col-lg-10 col-md-9 col-sm-10 col-9 mx-auto">
+                      <p pardot-region="bullet-text1">Securely manages and pays vendors, suppliers, and individuals
+                        from a single automated
+                        payment process you can monitor and approve any time, from any place.</p>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div class="col-md-6 mx-auto">
+                    <div class="row">
+                      <div class="col-lg-2 col-md-3 col-sm-2 col-3 mx-auto icons">
+                        <img class="img-fluid" pardot-region="bullet-image2" region-type="image"
+                        src="https://solutions2.comdata.com/l/95542/2020-07-21/49vz3h/95542/277438/icon_team.png" />
+                      </div>
+                      <div class="col-lg-10 col-md-9 col-sm-10 col-9 mx-auto">
+                        <p pardot-region="bullet-text2">Works across multiple business units and divisions and connects data from multiple systems, treasury accounts, and locations.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+
+                <div class="row">
+
+                  <div class="col-md-6 mx-auto">
+                    <div class="row">
+                      <div class="col-lg-2 col-md-3 col-sm-2 col-3 mx-auto icons">
+                        <img class="img-fluid" pardot-region="bullet-image3" region-type="image"
+                        src="https://solutions2.comdata.com/l/95542/2020-07-21/49vz3m/95542/277442/icon_x.png" />
+                      </div>
+                      <div class="col-lg-10 col-md-9 col-sm-10 col-9 mx-auto">
+                        <p pardot-region="bullet-text3">Eliminates the need to make separate AP runs for checks, ACH, card, and international payments.</p>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div class="col-md-6 mx-auto">
+                    <div class="row">
+                      <div class="col-lg-2 col-md-3 col-sm-2 col-3 mx-auto icons">
+                        <img class="img-fluid" pardot-region="bullet-image4" region-type="image"
+                        src="https://solutions2.comdata.com/l/95542/2020-07-21/49vz2r/95542/277418/icon_calendar.png" />
+                      </div>
+                      <div class="col-lg-10 col-md-9 col-sm-10 col-9 mx-auto">
+                        <p pardot-region="bullet-text4">Creates virtually zero burden on internal resources thanks to a dedicated project management team
+                          that supports you from day one, providing implementation, documentation, and training.</p>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div class="row">
+
+                    <div class="col-md-6 mx-auto">
+                      <div class="row">
+                        <div class="col-lg-2 col-md-3 col-sm-2 col-3 mx-auto icons">
+                          <img class="img-fluid" pardot-region="bullet-imag5" region-type="image"
+                          src="https://solutions2.comdata.com/l/95542/2020-07-21/49vz2w/95542/277422/icon_clock.png" />
+                        </div>
+                        <div class="col-lg-10 col-md-9 col-sm-10 col-9 mx-auto">
+                          <p pardot-region="bullet-text5">Cuts invoice payment execution time by up to 75%.</p>
+                        </div>
+                      </div>
+
+                    </div>
+
+                    <div class="col-md-6 mx-auto">
+                      <div class="row">
+                        <div class="col-lg-2 col-md-3 col-sm-2 col-3 mx-auto icons">
+                          <img class="img-fluid" pardot-region="bullet-image6" region-type="image"
+                          src="https://solutions2.comdata.com/l/95542/2020-07-21/49vz3f/95542/277440/icon_report.png" />
+                        </div>
+                        <div class="col-lg-10 col-md-9 col-sm-10 col-9 mx-auto">
+                          <p pardot-region="bullet-text6">Offers incredibly customizable reporting by a number of preferences.</p>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div class="row">
+
+                    <div class="col-md-6 mx-auto">
+                      <div class="row">
+                        <div class="col-lg-2 col-md-3 col-sm-2 col-3 mx-auto icons">
+                          <img class="img-fluid" pardot-region="bullet-image7" region-type="image"
+                          src="https://solutions2.comdata.com/l/95542/2020-07-21/49vz3c/95542/277436/icon_money.png" />
+                        </div>
+                        <div class="col-lg-10 col-md-9 col-sm-10 col-9 mx-auto">
+                          <p pardot-region="bullet-text7">Is a prefunded payment solution that requires no credit.</p>
+                        </div>
+                      </div>
+
+                    </div>
+
+                    <div class="col-md-6 mx-auto">
+                      <div class="row">
+                        <div class="col-lg-2 col-md-3 col-sm-2 col-3 mx-auto icons">
+                          <img class="img-fluid" pardot-region="bullet-image8" region-type="image"
+                          src="https://solutions2.comdata.com/l/95542/2020-07-21/49vz2t/95542/277420/icon_check.png" />
+                        </div>
+                        <div class="col-lg-10 col-md-9 col-sm-10 col-9 mx-auto">
+                          <p pardot-region="bullet-text8">Removes your risk of liability, as well as issues with escheatment, stale checks, duplicate payments, and fraud.</p>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div class="row">
+
+                    <div class="col-md-6 mx-auto">
+                      <div class="row">
+                        <div class="col-lg-2 col-md-3 col-sm-2 col-3 mx-auto icons">
+                          <img class="img-fluid" pardot-region="bullet-image9" region-type="image"
+                          src="https://solutions2.comdata.com/l/95542/2020-07-21/49vz2y/95542/277424/icon_computer.png" />
+                        </div>
+                        <div class="col-lg-10 col-md-9 col-sm-10 col-9 mx-auto">
+                          <p pardot-region="bullet-text9">Provides customizable approval workflow that lets you control who gets paid and when.</p>
+                        </div>
+                      </div>
+
+                    </div>
+
+                    <div class="col-md-6 mx-auto">
+                      <div class="row">
+                        <div class="col-lg-2 col-md-3 col-sm-2 col-3 mx-auto icons">
+                          <img class="img-fluid" pardot-region="bullet-image10" region-type="image"
+                          src="	https://solutions2.comdata.com/l/95542/2020-07-21/49vz33/95542/277428/icon_graph.png" />
+                        </div>
+                        <div class="col-lg-10 col-md-9 col-sm-10 col-9 mx-auto">
+                          <p pardot-region="bullet-text10">Delivers enhanced views of AP data and spending patterns.</p>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div class="row">
+
+                    <div class="col-md-6 mx-auto">
+                      <div class="row">
+                        <div class="col-lg-2 col-md-3 col-sm-2 col-3 mx-auto icons">
+                          <img class="img-fluid" pardot-region="bullet-image11" region-type="image"
+                          src="https://solutions2.comdata.com/l/95542/2020-07-21/49vz31/95542/277426/icon_gear.png" />
+                        </div>
+                        <div class="col-lg-10 col-md-9 col-sm-10 col-9 mx-auto">
+                          <p pardot-region="bullet-text11">Takes over the heavy work of vendor management with a Comdata-monitored and managed vendor
+                            supplier portal. It connects you with your vendors, and to the more than 800,000 suppliers and
+                            vendors who are already enrolled in Comdata’s
+                            ASAP vendor network. Comdata resolves issues, handles payment questions, and vendor reporting.</p>
+                          </div>
+                        </div>
+
+                      </div>
+
+                      <div class="col-md-6 mx-auto">
+                        <div class="row">
+                          <div class="col-lg-2 col-md-3 col-sm-2 col-3 mx-auto icons">
+                            <img class="img-fluid" pardot-region="bullet-image12" region-type="image"
+                            src="https://solutions2.comdata.com/l/95542/2020-07-21/49vz39/95542/277432/icon_lock_12.png" />
+                          </div>
+                          <div class="col-lg-10 col-md-9 col-sm-10 col-9 mx-auto">
+                            <p pardot-region="bullet-text12">Promotes security: all files are transmitted via secure FTP.</p>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+
+                    <div class="row">
+
+                      <div class="col-md-6 mx-auto">
+                        <div class="row">
+                          <div class="col-lg-2 col-md-3 col-sm-2 col-3 mx-auto icons">
+                            <img class="img-fluid" pardot-region="bullet-image13" region-type="image"
+                            src="https://solutions2.comdata.com/l/95542/2020-07-21/49vz35/95542/277434/icon_lowcost.png" />
+                          </div>
+                          <div class="col-lg-10 col-md-9 col-sm-10 col-9 mx-auto">
+                            <p pardot-region="bullet-text13">Cuts between $2 and $6 in per-payment costs compared to check payment.</p>
+                          </div>
+                        </div>
+
+                      </div>
+
+                      <div class="col-md-6 mx-auto">
+
+                      </div>
+
+                    </div>
+
+
+                  </div>
+                </section>
+
+                <section>
+                  <div>
+                    <div class="row">
+
+                      <div class="col-md-6 p-0 stock stock-2 order-sm-12" style="overflow:hidden;">
+                        <img id="plane-left" src="https://solutions2.comdata.com/l/95542/2020-07-16/49lt2w/95542/276528/plane_left.png" class="plane-twirl rellax" data-rellax-speed="1" style="float:right;"/>
+                      </div>
+
+                      <div class="col-md-6 mx-auto blue-bg-2 color-bg-padding order-sm-1">
+                        <h4 pardot-region="title_4" class="text-white">No matter where you are or how you want to manage your
+                          business payments,
+                          ASAP puts wings on your AP – helping you save time, money, and trouble in a big way.</h4>
+                          <p pardot-region="body_4" class="text-white">No wonder so many major North American corporations
+                            trust ASAP to handle
+                            all of their AP while they focus on their business. At Comdata, we have the ideas, innovations,
+                            and comprehensive programs that help leading companies thrive.</p>
+                            <h5 pardot-region="title_5" class="mt-5" id="form">How can we help you? Let’s talk today.</h5>
+
+                            %%content%%
+
+                          </div>
+
+                        </div>
+                      </div>
+                    </section>
+
+                    <footer>
+
+                      <div class="row">
+                        <div class="col-xl-2 col-lg-3 col-md-4 col-sm-12 mx-auto footer-content" id="bottom-logo">
+                          <img src="https://solutions2.comdata.com/l/95542/2020-07-09/496lx6/95542/275099/asap_logo.png" />
+                        </div>
+                        <div class="col-xl-10 col-lg-9 col-md-8 col-sm-12 mx-auto footer-content" id="bottom-copy">
+                          <p class="text-white" style="font-size:0.75rem;">
+                            &copy; <span id="copyright-year"></span> Comdata Inc. All Rights Reserved. The Comdata Mastercard® is issued by Regions Bank,
+                            pursuant to a license by Mastercard International Incorporated.
+                            Mastercard is a registered trademark of Mastercard International Incorporated.
+                            Comdata is a registered trademark of Comdata Inc.
+                          </p>
+                          <p style="font-size:0.75rem; margin-top:-0.5rem;">
+                            <a href="https://www.comdata.com/website-privacy-policy"
+                            class="text-white">Privacy Policy</a>
+                          </p>
+                        </div>
+                      </div>
+
+                    </footer>
+
+
+
+
+
+                    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+                    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+                    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+                    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+                    </script>
+                    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+                    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+                    </script>
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.min.js"></script>
+                    <script>
+                    $(document).ready(function () {
+                      $("#copyright-year").text(new Date().getFullYear());
+                      var video = document.getElementById('hero_video');
+                      video.play();
+                      video.addEventListener("timeupdate", function () {
+                        if (this.currentTime >= 4.65) {
+                          this.pause();
+                          $(".title-fade").animate({
+                            top: 0,
+                            opacity: 1
+                          }, 'slow');
+                        }
+                      });
+
+                      var rellax = new Rellax('.rellax');
+
+                      $(".learn-more").click(function() {
+                        $([document.documentElement, document.body]).animate({
+                          scrollTop: $("#form").offset().top
+                        }, 750, 'swing');
+                      });
+
+                      $("#down-arrow").click(function() {
+                        $([document.documentElement, document.body]).animate({
+                          scrollTop: $("#title_1").offset().top
+                        }, 750, 'swing');
+                      });
+
+                      $("#plane-right").css({
+                        'margin-left' : "-50%",
+                        'opacity' : '0',
+                      });
+                      $(window).on('DOMContentLoaded load resize scroll', function(){
+                        if(isElementInViewport($("#plane-right"))){
+                          $("#plane-right").animate({
+                            'margin-left' : "0",
+                            'opacity' : '1',
+                          },500);
+                        }
+
+                      });
+
+                      $("#plane-left").css({
+                        'margin-right' : "-50%",
+                        'opacity' : '0',
+                      });
+                      $(window).on('DOMContentLoaded load resize scroll', function(){
+                        if(isElementInViewport($("#plane-left"))){
+                          $("#plane-left").animate({
+                            'margin-right' : "0",
+                            'opacity' : '1',
+                          },500);
+                        }
+                      });
+
+
+                      function isElementInViewport (el) {
+                        if (typeof jQuery === "function" && el instanceof jQuery) {
+                          el = el[0];
+                        }
+
+                        var rect = el.getBoundingClientRect();
+                        return (
+                          rect.top >= 0 &&
+                          rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+                        );
+                      }
+
+                      function getHeightFromTop(element) {
+                        var xPosition = 0;
+                        var yPosition = 0;
+
+                        while(element) {
+                          yPosition += (element.offsetTop - element.scrollTop + element.clientTop);
+                          element = element.offsetParent;
+                        }
+
+                        return yPosition;
+                      }
+
+
+                    });
+                    </script>
+                  </body>
+
+                  </html>
